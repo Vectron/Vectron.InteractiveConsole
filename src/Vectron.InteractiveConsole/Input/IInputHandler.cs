@@ -9,5 +9,5 @@ public interface IInputHandler
     /// Process the user input.
     /// </summary>
     /// <param name="input">The input to process.</param>
-    void ProcessInput(string input);
+    public void ProcessInput(string input);
 }

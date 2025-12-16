@@ -9,5 +9,5 @@ public interface IKeyHandler
     /// Handle the keystroke.
     /// </summary>
     /// <param name="keyInfo">The pressed key.</param>
-    void Handle(ConsoleKeyInfo keyInfo);
+    public void Handle(ConsoleKeyInfo keyInfo);
 }

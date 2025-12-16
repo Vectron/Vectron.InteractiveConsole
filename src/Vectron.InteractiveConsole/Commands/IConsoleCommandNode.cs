@@ -10,7 +10,7 @@ internal interface IConsoleCommandNode
     /// <summary>
     /// Gets an <see cref="IEnumerable{T}"/> of all child nodes in a depth first search.
     /// </summary>
-    IEnumerable<IConsoleCommand> Children
+    public IEnumerable<IConsoleCommand> Children
     {
         get;
     }
@@ -23,7 +23,7 @@ internal interface IConsoleCommandNode
     /// The found child node, <see langword="null"/> when not found.
     /// </param>
     /// <returns><see langword="true"/> when a node is found otherwise <see langword="false"/>.</returns>
-    bool TryGetChildNode(string key, [NotNullWhen(true)] out IConsoleCommandNode? consoleCommandNode);
+    public bool TryGetChildNode(string key, [NotNullWhen(true)] out IConsoleCommandNode? consoleCommandNode);
 
     /// <summary>
     /// Try to get the <see cref="IConsoleCommand"/> for this node.
@@ -32,5 +32,5 @@ internal interface IConsoleCommandNode
     /// The <see cref="IConsoleCommand"/> associated with this node, <see langword="null"/> when not set.
     /// </param>
     /// <returns><see langword="true"/> when command is set otherwise <see langword="false"/>.</returns>
-    bool TryGetCommand([NotNullWhen(true)] out IConsoleCommand? consoleCommand);
+    public bool TryGetCommand([NotNullWhen(true)] out IConsoleCommand? consoleCommand);
 }
