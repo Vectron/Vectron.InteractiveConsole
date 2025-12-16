@@ -13,15 +13,13 @@ namespace Vectron.InteractiveConsole.Ansi;
 /// <param name="consoleOutput">A <see cref="IConsoleOutput"/> instance.</param>
 internal sealed class AnsiConsoleCursor(IConsoleInput consoleInput, IConsoleOutput consoleOutput) : IConsoleCursor
 {
-    private int cursorIndex;
-
     /// <inheritdoc/>
     public int CursorIndex
     {
-        get => cursorIndex;
+        get;
         set
         {
-            cursorIndex = Math.Min(Math.Max(0, value), consoleInput.CurrentInput.Length);
+            field = Math.Min(Math.Max(0, value), consoleInput.CurrentInput.Length);
             UpdateCursorPosition();
         }
     }
