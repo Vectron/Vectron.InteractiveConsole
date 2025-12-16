@@ -8,7 +8,7 @@ public interface IConsoleCommand
     /// <summary>
     /// Gets a collection of names for the arguments.
     /// </summary>
-    string[]? ArgumentNames
+    public string[]? ArgumentNames
     {
         get;
     }
@@ -16,7 +16,7 @@ public interface IConsoleCommand
     /// <summary>
     /// Gets the command parameters.
     /// </summary>
-    string[] CommandParameters
+    public string[] CommandParameters
     {
         get;
     }
@@ -24,7 +24,7 @@ public interface IConsoleCommand
     /// <summary>
     /// Gets text explaining this <see cref="IConsoleCommand"/>.
     /// </summary>
-    string HelpText
+    public string HelpText
     {
         get;
     }
@@ -32,7 +32,7 @@ public interface IConsoleCommand
     /// <summary>
     /// Gets the maximum arguments needed to run this command.
     /// </summary>
-    int MaxArguments
+    public int MaxArguments
     {
         get;
     }
@@ -40,7 +40,7 @@ public interface IConsoleCommand
     /// <summary>
     /// Gets the minimum arguments needed to run this command.
     /// </summary>
-    int MinArguments
+    public int MinArguments
     {
         get;
     }
@@ -49,5 +49,5 @@ public interface IConsoleCommand
     /// Execute this command.
     /// </summary>
     /// <param name="arguments">Collection of arguments for this command.</param>
-    void Execute(string[] arguments);
+    public void Execute(string[] arguments);
 }

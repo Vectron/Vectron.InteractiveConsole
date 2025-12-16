@@ -19,11 +19,11 @@ public interface IConsoleOutput
     /// Writes a <see cref="string"/> to the text stream.
     /// </summary>
     /// <param name="value">The <see cref="string"/> to write.</param>
-    void Write(string? value);
+    public void Write(string? value);
 
     /// <summary>
     /// Writes a <see cref="string"/> followed by a line terminator to the text stream.
     /// </summary>
     /// <param name="value">The <see cref="string"/> to write.</param>
-    void WriteLine(string? value);
+    public void WriteLine(string? value);
 }

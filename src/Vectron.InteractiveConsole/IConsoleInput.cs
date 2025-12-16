@@ -8,7 +8,7 @@ public interface IConsoleInput
     /// <summary>
     /// Gets or sets the current user input.
     /// </summary>
-    string CurrentInput
+    public string CurrentInput
     {
         get;
         set;

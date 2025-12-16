@@ -8,7 +8,7 @@ public interface IConsoleCursor
     /// <summary>
     /// Gets or sets the current position of the cursor.
     /// </summary>
-    int CursorIndex
+    public int CursorIndex
     {
         get;
         set;
@@ -18,21 +18,21 @@ public interface IConsoleCursor
     /// Move the cursor back <paramref name="amount"/> positions.
     /// </summary>
     /// <param name="amount">The number of positions to move the cursor.</param>
-    void MoveBackward(int amount);
+    public void MoveBackward(int amount);
 
     /// <summary>
     /// Move the cursor to the end position.
     /// </summary>
-    void MoveEnd();
+    public void MoveEnd();
 
     /// <summary>
     /// Move the cursor forward <paramref name="amount"/> positions.
     /// </summary>
     /// <param name="amount">The number of positions to move the cursor.</param>
-    void MoveForward(int amount);
+    public void MoveForward(int amount);
 
     /// <summary>
     /// Move the cursor to the start position.
     /// </summary>
-    void MoveStart();
+    public void MoveStart();
 }
