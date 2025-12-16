@@ -46,8 +46,13 @@ internal sealed class CommandInputHandler(IConsoleCommandHierarchy consoleComman
         {
             command.Execute(commandArguments);
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
+            if (ex.InnerException is not null)
+            {
+                ex = ex.InnerException;
+            }
+
             Console.WriteLine($"Exception while executing command ({command.GetType()}): {ex.Message}");
         }
     }
